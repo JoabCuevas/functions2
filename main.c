@@ -15,8 +15,6 @@ int max_of_three(int x, int y, int z){
 //#2
 int sum(int num[], size_t size){
     int total = 0; 
-    // int size = sizeof num / sizeof num[0];
-
     for(int i = 0; i< size; i++){
         total += num[i];
     }
@@ -26,7 +24,6 @@ int sum(int num[], size_t size){
 //#3
 int mul(int num[], size_t size){
     int total = 1;
-    // int size = sizeof num / sizeof num[0];
     for(int i = 0; i< size; i++){
         total *= num[i];
     }
@@ -95,24 +92,18 @@ int * list(int T[], int size){
 
     for(int i = 0; i<size; i++){
         flag = 0;
-        // printf("T => %d\n", T[i]);
         for(int j = 0; j<index; j++){
-            // printf("%d ", x[j]);
             if(x[j] == T[i]){
                 
                 flag = 1;
             }
         }
-        // printf("\n");
         if(flag != 1){
             x[index++] = T[i];
         }
     }
 
-    // size2 = sizeof x / sizeof x[0];
-
-    // printf("%d\n", index);
-    
+   
     printf("[");
     for(int j = 0; j<index; j++){
         if(j < index-1){
@@ -123,9 +114,7 @@ int * list(int T[], int size){
     }
     printf("]");
 
-    
-
-    // return x;
+ 
 }
 
 
@@ -157,12 +146,7 @@ int * evennum(int E[], int size){
     for(int i=0; i<size; i++){
         n = E[i];
         if (n % 2 == 0){
-            // if(index >= 0){
             num[index++] = n;
-            // }else{
-            //     num[0] = n;
-            //     index++;
-            // }
         }            
     }
 
@@ -177,7 +161,7 @@ int * evennum(int E[], int size){
         }
     }
     printf("]");
-    // return num;
+    
 }    
 
 
@@ -196,11 +180,10 @@ int pnumber(int n){
 
 //#12
 int Palindrome(char string[]){ 
-    // Start from leftmost and rightmost corners of str 
+    
     int l = 0; 
     int h = strlen(string) - 1; 
   
-    // Keep comparing characters while they are same 
     while (h > l){ 
         if (string[l++] != string[h--]) {  
             return 0; 
